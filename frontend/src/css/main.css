@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+*{
+  margin:0;
+  padding:0;
+}
+:root{
+  --primarycolor:#7900FF;
+  --pink:#B91646;
+  --white:#FFFFFF;
+  --black:#000000;
+  --gray:#8991a5;
+  --grey:#DCDCDC;
+  --yellow:#FFBD35;
+  --light-yellow:#ffb41fa9;
+  --red:#DA1212;
+  --shadowcolor:#00000033;
+  --shadowcolor1:#3c404326;
+}
+html{
+  font-size:62.5%;
+  background-color:#e0e2e8;
+  background-color:#FFFFFF;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    font-family: 'Poppins', sans-serif;
+}
