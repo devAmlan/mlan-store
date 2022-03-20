@@ -1,0 +1,71 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:5.5rem;
+    padding:0 3rem;
+    flex-wrap:wrap;
+    background-color:var(--white);
+    border-bottom:1px solid none;
+    box-shadow: var(--shadowcolor) 0px 1px 2px 0px, var(--shadowcolor1) 0px 2px 6px 2px;
+  }
+  .logo{
+    font-size:2.7rem;
+    color:var(--primarycolor);
+    font-family: 'Bebas Neue', cursive;
+  }
+  .searchbar{
+    width:20rem;
+    height:3rem;
+    border:1px solid var(--gray);
+    outline:none;
+    padding-left:1rem;
+    border-radius:8px;
+  }
+  .header_nav ul{
+     display:flex;
+     justify-content:center;
+     align-items:center;
+  }
+  .header_nav ul li{
+     margin:1rem;
+     list-style:none;
+     font-size:2.5rem;
+  }
+  .login_nav{
+      width:9rem;
+      height:3.3rem;
+      background-color:var(--primarycolor);
+      color:var(--white);
+      border:none;
+      border-radius:8px;
+      font-size:1.6rem;
+      margin:1rem;
+      text-align:center;
+      font-weight:700;
+      cursor: pointer;
+  }
+  .wishlist_nav,
+  .cart_nav
+  {
+    position: relative;
+    cursor: pointer;
+    color:var(--black);
+  }
+  .badge{
+      position:absolute;
+      top:-6px;
+      left:1.5rem;
+      font-size:1.5rem;
+      width:1.8rem;
+      height:1.8rem;
+      background-color:var(--red);
+      color:var(--white);
+      border:none;
+      border-radius:50%;
+      z-index:2;
+      text-align:center;
+  }
+  @media only screen and (max-width: 600px) {
+      
+  }
