@@ -19,7 +19,7 @@ const Productdb = [
     category:"keyboards"
   },
   {
-    id:1,
+    _id:1,
     productimage:kb2,
     productname:"HEX 4B",
     productprice:12000,
@@ -29,7 +29,7 @@ const Productdb = [
     category:"keyboards"
   },
   {
-    id:2,
+    _id:2,
     productimage:kb3,
     productname:"GMK KAIJU",
     productprice:11500,
@@ -39,7 +39,7 @@ const Productdb = [
     category:"keyboards"
   },
   {
-    id:3,
+    _id:3,
     productimage:kb4,
     productname:"GMK TUZI",
     productprice:12500,
@@ -49,7 +49,7 @@ const Productdb = [
     category:"keyboards"
   },
   {
-    id:4,
+    _id:4,
     productimage:k1,
     productname:"ALPACA LINEARS",
     productprice:600,
@@ -59,7 +59,7 @@ const Productdb = [
     category:"switches"
   },
   {
-    id:5,
+    _id:5,
     productimage:k2,
     productname:"GAZZEW BOBA U4T",
     productprice:480,
@@ -69,7 +69,7 @@ const Productdb = [
     category:"switches"
   },
   {
-    id:6,
+    _id:6,
     productimage:k3,
     productname:"8008 INK SWITCHES",
     productprice:1100,
@@ -79,7 +79,7 @@ const Productdb = [
     category:"switches"
   },
   {
-    id:7,
+    _id:7,
     productimage:k4,
     productname:"GATERON ALIAZ SILENT MX",
     productprice:480,
@@ -89,7 +89,7 @@ const Productdb = [
     category:"switches"
   },
   {
-    id:7,
+    _id:8,
     productimage:deskpad,
     productname:"SKULL DESKPAD",
     productprice:300,

@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Productdb } from '../../api/db/Productdb'
 import Product from '../../components/product/Product'
 function ProductPage() {
-  const [products] = useState(Productdb)
+
   return (
     <>
       <div className="all_products">
         {
-          products.map((each) => {
+          Productdb.map((each) => {
             return (
               <>
                <div key={each.id}>
