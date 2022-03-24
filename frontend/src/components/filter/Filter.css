@@ -1,0 +1,47 @@
+.filter{
+    margin:1rem;
+    text-align:center;
+    border:none;
+    box-shadow: 0 4px 8px 0 var(--shadowcolor);
+    border-radius:8px;
+    position:fixed;
+    padding:1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+    z-index:5;
+    background-color:var(--white);
+  }
+  .filter h4{
+    font-size:2rem;
+    margin-bottom:1rem;
+  }
+  .category_filter{
+    text-align:left;
+    margin-top:2rem;
+  }
+  .rating_filter{
+    text-align:left;
+    margin-top:2rem;
+  }
+  .filter_input{
+    margin:3px;
+  }
+  .filter_label{
+    font-size:1.7rem;
+    color:var(--primarycolor);
+    margin-right:1rem;
+  }
+  .sort_filter{
+    text-align:left;
+    margin-top:2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .filter{
+      flex-direction:row;
+      position:static;
+    }
+  }

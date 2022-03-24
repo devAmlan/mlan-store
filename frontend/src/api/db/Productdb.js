@@ -9,7 +9,7 @@ import k4 from "../../assets/img/k4.jpg"
 import deskpad from "../../assets/img/deskpad.png"
 const Productdb = [
   {
-    id:0,
+    _id:0,
     productimage:kb1,
     productname:"GMK TERROR BELOW",
     productprice:12500,
@@ -45,7 +45,7 @@ const Productdb = [
     productprice:12500,
     originalprice:14500,
     tag:"",
-    rating:4.5,
+    rating:3.5,
     category:"keyboards"
   },
   {
@@ -75,7 +75,7 @@ const Productdb = [
     productprice:1100,
     originalprice:1300,
     tag:"",
-    rating:4.5,
+    rating:3.0,
     category:"switches"
   },
   {
@@ -85,7 +85,7 @@ const Productdb = [
     productprice:480,
     originalprice:550,
     tag:"Best Seller",
-    rating:4.0,
+    rating:4.5,
     category:"switches"
   },
   {
@@ -95,7 +95,7 @@ const Productdb = [
     productprice:300,
     originalprice:450,
     tag:"",
-    rating:4.5,
+    rating:4.0,
     category:"accessories"
   }
 
