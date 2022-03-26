@@ -9,15 +9,15 @@ function Filter() {
         <div className="category_filter">
           <h4>Category</h4>
           <input type="checkbox" className="filter_input"
-            onChange={() => { dispatch({ type: "keyboards", payload: Productdb }) }}
+            onChange={() => { dispatch({ type: "category", payload: "keyboards" }) }}
           />
           <label className="filter_label">Keyboards</label><br />
           <input type="checkbox" className="filter_input"
-            onChange={() => { dispatch({ type: "switches", payload: Productdb }) }}
+            onChange={() => { dispatch({ type: "category", payload: "switches" }) }}
           />
           <label className="filter_label">Switches</label><br />
           <input type="checkbox" className="filter_input"
-            onChange={() => { dispatch({ type: "accessories", payload: Productdb }) }}
+            onChange={() => { dispatch({ type: "category", payload: "accessories" }) }}
           />
           <label className="filter_label">Accessories</label><br />
         </div>
@@ -52,11 +52,11 @@ function Filter() {
         <div className="sort_filter">
           <h4>Sort by</h4>
           <input type="radio" id="lth" value="lth" name="sort" className="filter_input"
-            onChange={() => { dispatch({ type: "lth", payload: Productdb }) }}
+            onChange={() => { dispatch({ type: "lth", payload: "" }) }}
           />
           <label Htmlfor="lth" className="filter_label">Price - Low to high</label><br />
           <input type="radio" id="htl" value="htl" name="sort" className="filter_input"
-            onChange={() => { dispatch({ type: "htl", payload: Productdb }) }}
+            onChange={() => { dispatch({ type: "htl", payload: "" }) }}
           />
           <label Htmlfor="htl" className="filter_label">Price - High to low</label>
         </div>

@@ -2,14 +2,14 @@ export function FilterReducer(state, action) {
 
   if (action.type === "lth") {
     return {
-      ...state, productDb: action.payload.sort((firstitem, seconditem) => {
+      ...state, productDb: state.productDb.sort((firstitem, seconditem) => {
         return firstitem.productprice - seconditem.productprice
       })
     }
   }
   else if (action.type === "htl") {
     return {
-      ...state, productDb: action.payload.sort((firstitem, seconditem) => {
+      ...state, productDb: state.productDb.sort((firstitem, seconditem) => {
         return seconditem.productprice - firstitem.productprice
       })
     }
@@ -42,27 +42,11 @@ export function FilterReducer(state, action) {
       })
     }
   }
-  else if (action.type === "keyboards") {
-    return {
-      ...state, productDb: action.payload.filter((item) => {
-        return item.category === "keyboards"
-      })
-    }
+  else if (action.type === "category") {
+    return {...state,productDb:state.productDb.filter((item)=> item.category === action.payload)}
   }
-  else if (action.type === "switches") {
-    return {
-      ...state, productDb: action.payload.filter((item) => {
-        return item.category === "switches"
-      })
-    }
-  }
-  else if (action.type === "accessories") {
-    return {
-      ...state, productDb: action.payload.filter((item) => {
-        return item.category === "accessories"
-      })
-    }
-  } else {
+
+   else {
     return { ...state, productDb: action.payload }
   }
 }
