@@ -8,7 +8,7 @@
   
   .all_products .product{
       width:27rem;
-      height:39rem;
+      height:42rem;
       background-color:var(--white);
       margin:1rem;
       cursor: pointer;

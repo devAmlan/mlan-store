@@ -1,13 +1,17 @@
-import React from 'react'
-import { Productdb } from '../../api/db/Productdb'
+import React, { useContext } from 'react'
 import Product from '../../components/product/Product'
+import Filter from '../../components/filter/Filter'
+import {FilterContext} from "../../context/Filtercontext"
 function ProductPage() {
-
+  const {state} = useContext(FilterContext)
   return (
     <>
+    <div className='product-page'>
+      <Filter/>
       <div className="all_products">
         {
-          Productdb.map((each) => {
+          state.productDb.map((each) => {
+           
             return (
               <>
                <div key={each.id}>
@@ -23,8 +27,10 @@ function ProductPage() {
                </div>
               </>
             )
+            
           })
         }
+      </div>
       </div>
     </>
   )
