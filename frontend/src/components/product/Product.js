@@ -9,7 +9,7 @@ function Product({ productname, productimage, productprice, originalprice, produ
 
         {(producttag !== "") ?
           <>
-            <div class="product_badge">
+            <div className="product_badge">
               <p>{producttag}</p>
             </div>
           </>

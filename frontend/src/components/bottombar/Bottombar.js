@@ -4,22 +4,22 @@ import { Link } from "react-router-dom"
 function Bottombar() {
     return (
         <>
-            <div class="bottom-bar">
+            <div className="bottom-bar">
                 <Link to="/">
-                    <div class="menu">
-                        <i class="fa-solid fa-house"></i>
+                    <div className="menu">
+                        <i className="fa-solid fa-house"></i>
                         <p>Home</p>
                     </div>
                 </Link>
                 <Link to="/product">
-                    <div class="menu">
-                        <i class="fa-solid fa-store"></i>
+                    <div className="menu">
+                        <i className="fa-solid fa-store"></i>
                         <p>Shop</p>
                     </div>
                 </Link>
                 <Link to="/profile">
-                    <div class="menu">
-                        <i class="fa-solid fa-user"></i>
+                    <div className="menu">
+                        <i className="fa-solid fa-user"></i>
                         <p>Profile</p>
                     </div>
                 </Link>
