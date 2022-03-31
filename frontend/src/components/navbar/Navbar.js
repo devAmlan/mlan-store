@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom"
+import {AuthContext} from "../../context/AuthContext"
 function Navbar() {
+    const {authuserdata} = useContext(AuthContext)
     return (
         <>
             <div className="header">
@@ -10,7 +12,9 @@ function Navbar() {
                     placeholder="Search" />
                 <nav className="header_nav">
                     <ul>
-                        <Link to="/login"><button className="login_nav">Log in</button></Link>
+                        {(authuserdata.email !== undefined)?
+                        <div className='loggedinuser'>👋 {authuserdata.firstName}</div>
+                        :<><Link to="/login"><button className="login_nav">Log in</button></Link></>}
                         <Link to="/wishlist">
                             <li className="wishlist_nav">
                                 <i className="fa-solid fa-heart"></i>

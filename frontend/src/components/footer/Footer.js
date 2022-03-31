@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
     <footer>
-    <div class="about-shop">
+    <div className="about-shop">
     <h3>ABOUT THE SHOP</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At commodi aspernatur nulla perferendis numquam ut quas vero dolorem quasi veritatis.</p>
     </div>
