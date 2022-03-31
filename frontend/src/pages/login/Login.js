@@ -7,17 +7,16 @@ import { ToastContainer, toast } from "react-toast"
 function Login() {
   const navigate = useNavigate()
   const { setAuthuserdata } = useContext(AuthContext)
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [logindata, setLogindata] = useState({ email: "", password: "" })
   const loginHandler = async (e) => {
     e.preventDefault()
     try {
-      if (!email || !password) {
+      if (!logindata.email || !logindata.password) {
         toast.warn('please enter email and password')
-        setEmail("")
-        setPassword("")
+        setLogindata({ email: "", password: "" })
       } else {
-        const response = await axios.post(`/api/auth/login`, JSON.stringify({ email, password }))
+        const response = await axios.post(`/api/auth/login`,
+          JSON.stringify({ email: logindata.email, password: logindata.password }))
 
         if (response.data.errors) {
           toast.error(response.data.errors[0])
@@ -26,15 +25,12 @@ function Login() {
           localStorage.setItem("authtoken", response.data.encodedToken);
           navigate('/product')
         }
-        setEmail("")
-        setPassword("")
+        setLogindata({ email: "", password: "" })
       }
     }
     catch (error) {
       console.log(error)
-
-      setEmail("")
-      setPassword("")
+      setLogindata({ email: "", password: "" })
     }
   }
   return (
@@ -42,16 +38,16 @@ function Login() {
       <ToastContainer />
       <div className="authbox">
         <form>
-          <h3>Signup</h3>
+          <h3>Login</h3>
           <label htmlFor="">Email</label>
           <input type="email" className='user-input'
-            value={email}
-            onChange={(e) => { setEmail(e.target.value) }}
+            value={logindata.email}
+            onChange={(e) => { setLogindata((data) => ({ ...data, email: e.target.value })) }}
           />
           <label htmlFor="">Password</label>
           <input type="password" className='user-input'
-            value={password}
-            onChange={(e) => { setPassword(e.target.value) }}
+            value={logindata.password}
+            onChange={(e) => { setLogindata((data) => ({ ...data, password: e.target.value })) }}
           />
           <div className="term-input">
             <input type="checkbox" />
