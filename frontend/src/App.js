@@ -8,12 +8,14 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 import {FilterProvider} from "./context/Filtercontext"
 import {AuthProvider} from "./context/AuthContext"
 import Login from './pages/login/Login';
+import { ProductProvider } from './context/ProductContext';
 function App() {
   return (
     <div className="App">
     
     <BrowserRouter>
     <AuthProvider>
+    <ProductProvider>
     <FilterProvider>
     <Navbar/>
     <Routes>
@@ -24,6 +26,7 @@ function App() {
     </Routes>
     <Bottombar/>
     </FilterProvider>
+    </ProductProvider>
     </AuthProvider>
     </BrowserRouter>
     </div>
