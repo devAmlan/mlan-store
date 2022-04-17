@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react'
 import "../../pages/cartpage/Cart.css"
 import { CartContext } from "../../context/CartContext"
+import { WishlistContext } from "../../context/WishlistContext"
 function CartProduct({ quantity, productid, productname, productimage, productprice, originalprice, producttag, productrating }) {
     const { dispatch, removeFromcart } = useContext(CartContext)
+    const { movetoWishlist } = useContext(WishlistContext)
     const cartproduct = { productid, productname, productimage, productprice, originalprice, producttag, productrating }
     const [itemqty, setItemqty] = useState(quantity)
     if (itemqty <= 0) {
@@ -40,7 +42,7 @@ function CartProduct({ quantity, productid, productname, productimage, productpr
                             <button
                                 onClick={() => { removeFromcart(cartproduct) }}>
                                 REMOVE FROM CART</button>
-                            <button>MOVE TO WISHLIST</button>
+                            <button onClick={() => { movetoWishlist(cartproduct) }}>MOVE TO WISHLIST</button>
                         </div>
                     </div>
                 </div>
