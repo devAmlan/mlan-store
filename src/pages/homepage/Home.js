@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Home.css"
 import { Link } from "react-router-dom"
 import Footer from '../../components/footer/Footer'
 import { Featuredproductdb } from "../../backend/db/Featuredproductdb"
 import FeaturedProduct from '../../components/featuredproduct/FeaturedProduct'
 import bannerimage from "../../assets/img/banner.png"
-import keyboard from "../../assets/img/keyboard.jpg"
-import keyswitch from "../../assets/img/switch.jpg"
+import axios from "axios"
 function Home() {
+  const [productcategory, setProductcategory] = useState([])
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get('/api/categories')
+      setProductcategory(response.data.categories)
+    })()
+  }, [])
+
   return (
     <>
       <div className="banner">
@@ -25,7 +32,22 @@ function Home() {
 
       <h3 className="category_heading">CATEGORIES</h3>
       <div className="category">
-        <div className="product_cateogory">
+        {
+          productcategory.map((product) => {
+            return (
+              <div className='product_cateogory' key={product._id}>
+                <img src={product.categoryImage} alt="" />
+                <h3>{product.categoryName}</h3>
+                <p>{product.description}</p>
+                <Link to="/product">
+                  <button>EXPLORE CATEGORY</button>
+                </Link>
+
+              </div>
+            )
+          })
+        }
+        {/* <div className="product_cateogory">
           <img src={keyboard} alt="" />
           <h3>MECHANICAL KEYBOARDS</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis recusandae impedit voluptatum, architecto eveniet laboriosam. Velit labore natus facilis quo?</p>
@@ -36,7 +58,7 @@ function Home() {
           <h3>SWITCHES & ACCESSORIES</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis recusandae impedit voluptatum, architecto eveniet laboriosam. Velit labore natus facilis quo?</p>
           <button>EXPLORE CATEGORY</button>
-        </div>
+        </div> */}
       </div>
 
       <div className="featured_collection">
