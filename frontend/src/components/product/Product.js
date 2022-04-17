@@ -2,12 +2,14 @@ import React, { useState, useContext } from 'react'
 import "./Product.css"
 import { AiFillHeart, AiOutlineHeart, AiFillStar } from "react-icons/ai"
 import { CartContext } from "../../context/CartContext"
+import { WishlistContext } from '../../context/WishlistContext'
 import { ToastContainer } from "react-toast"
-function Product({ productid,productname, productimage, productprice, originalprice, producttag, productrating }) {
+function Product({ productid, productname, productimage, productprice, originalprice, producttag, productrating }) {
 
   const [addwishlist, setAddwishlist] = useState(false)
   const { addTocart } = useContext(CartContext)
-  const product = {productid,productname, productimage, productprice, originalprice, producttag, productrating}
+  const { addtoWishlist, removefromWishlist } = useContext(WishlistContext)
+  const product = { productid, productname, productimage, productprice, originalprice, producttag, productrating }
 
   return (
     <>
@@ -26,12 +28,12 @@ function Product({ productid,productname, productimage, productprice, originalpr
           {(addwishlist) ?
             <>
               <AiFillHeart className='fill_heart'
-                onClick={() => { setAddwishlist(!addwishlist) }}
+                onClick={() => { setAddwishlist(false); removefromWishlist(product) }}
               />
             </>
             : <>
               <AiOutlineHeart className='fill_heart'
-                onClick={() => { setAddwishlist(!addwishlist) }} />
+                onClick={() => { setAddwishlist(true); addtoWishlist(product) }} />
             </>
           }
 
@@ -51,7 +53,7 @@ function Product({ productid,productname, productimage, productprice, originalpr
         </div>
         <div className="buy_btn">
           <button
-            onClick={()=>{addTocart(product)}}>
+            onClick={() => { addTocart(product) }}>
             ADD TO CART</button>
         </div>
       </div>

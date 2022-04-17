@@ -17,7 +17,7 @@ function Bottombar() {
                         <p>Shop</p>
                     </div>
                 </Link>
-                <Link to="/profile">
+                <Link to="/login">
                     <div className="menu">
                         <i className="fa-solid fa-user"></i>
                         <p>Profile</p>

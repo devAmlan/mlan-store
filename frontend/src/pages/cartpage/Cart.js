@@ -28,8 +28,6 @@ function Cart() {
                 :
                 <div className="cartpage">
                     <h2>MY CART ({cartProducts.length})</h2>
-
-                    <p>{cartProducts[0].qty}</p>
                     {
                         cartProducts.map((product) => {
                             return (
@@ -40,6 +38,7 @@ function Cart() {
                                     productimage={product.productimage}
                                     productprice={product.productprice}
                                     originalprice={product.originalprice}
+                                    productrating={product.productrating}
                                 />)
                         })
                     }
