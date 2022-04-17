@@ -1,0 +1,120 @@
+.cartpage h2 {
+  margin: 3rem 1rem;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.cart_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.added_product {
+  display: flex;
+  margin: 1rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 var(--shadowcolor);
+  border-radius: 8px;
+}
+.added_product_image {
+  width: 25rem;
+  height: 24.5rem;
+  border: none;
+}
+.added_product_image img {
+  max-inline-size: 100%;
+  block-size: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 0px 0px 8px;
+}
+.added_product_details {
+  width: 25rem;
+  height: 24.5rem;
+  border: none;
+}
+.total_amount {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7.5rem 1rem;
+  flex-direction: column;
+}
+.total_amount button {
+  margin-top: 3rem;
+  width: 25rem;
+  height: 3.5rem;
+  background-color: var(--primarycolor);
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+}
+.order_details {
+  text-align: left;
+}
+.order_details hr {
+  background-color: var(--black);
+  height: 1.4px;
+  margin: 1rem 0;
+}
+.order_details h3 {
+  font-size: 2.3rem;
+  text-align: center;
+}
+.order_details p {
+  font-size: 1.8rem;
+  margin: 1rem;
+}
+.no_item_alert {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.no_item_alert button {
+  padding: 5px 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  background-color: var(--primarycolor);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.action_btns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 1.5rem;
+}
+.action_btns button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primarycolor);
+  border: none;
+  color: var(--white);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.action_btns p {
+  margin: 0.5rem;
+  font-size: 1.7rem;
+}
+@media only screen and (max-width: 600px) {
+  .added_product {
+    flex-direction: column;
+  }
+  .added_product_image {
+    width: 25rem;
+    height: 20rem;
+  }
+  .added_product_details {
+    width: 25rem;
+  }
+  .added_product_image img {
+    border-radius: 1rem 1rem 0 0;
+  }
+}

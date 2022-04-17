@@ -2,8 +2,10 @@ import React,{useContext} from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom"
 import {AuthContext} from "../../context/AuthContext"
+import {CartContext} from "../../context/CartContext"
 function Navbar() {
     const {authuserdata} = useContext(AuthContext)
+    const {state:{cartProducts}} = useContext(CartContext)
     return (
         <>
             <div className="header">
@@ -24,7 +26,7 @@ function Navbar() {
                         <Link to="/cart">
                             <li className="cart_nav">
                                 <i className="fa-solid fa-cart-shopping"></i>
-                                <div className="badge">1</div>
+                                <div className="badge">{cartProducts.length}</div>
                             </li>
                         </Link>
                     </ul>
