@@ -5,9 +5,9 @@
   flex-direction: column;
   margin-top: 5rem;
 }
-.authbox h3{
-    font-size:2.3rem;
-    text-align:center;
+.authbox h3 {
+  font-size: 2.3rem;
+  text-align: center;
 }
 .authbox form {
   width: 30rem;
@@ -21,56 +21,57 @@
 .authbox form label {
   font-size: 1.5rem;
   color: var(--primarycolor);
-  margin-left:1rem;
+  margin-left: 1rem;
 }
-.user-input{
-    width:90%;
-    height:3rem;
-    font-size:1.6rem;
-    outline:none;
-    border-radius:4px;
-    padding-left:8px;
-    border:1.5px solid var(--grey);
-    margin:0.3rem 1rem;  
+.user-input {
+  width: 90%;
+  height: 3rem;
+  font-size: 1.6rem;
+  outline: none;
+  border-radius: 4px;
+  padding-left: 8px;
+  border: 1.5px solid var(--grey);
+  margin: 0.3rem 1rem;
 }
-.user-input:focus{
-    border:1.5px solid var(--primarycolor);
+.user-input:focus {
+  border: 1.5px solid var(--primarycolor);
 }
-.term-input{
-    margin:10px 5px;
-    font-size:18px;
-    text-align:center;
+.term-input {
+  margin: 10px 5px;
+  font-size: 18px;
+  text-align: center;
 }
-.term-input label{
-    margin:0;
-    font-size:1.6rem;
-    color:var(--black);
+.term-input label {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--black);
 }
-.input_btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.input_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
 }
-.input_btn button{
-    width:95%;
-    background-color:var(--primarycolor);
-    height:3.5rem;
-    border:2px solid var(--primarycolor);
-    font-size:1.8rem;
-    border-radius:7px;
-    cursor: pointer;
-    color:var(--white);
-} 
-.authbox p{
-    font-size:1.7rem;
-    text-align:center;
-    margin:1rem;
+.input_btn button {
+  width: 95%;
+  background-color: var(--primarycolor);
+  height: 3.5rem;
+  border: 2px solid var(--primarycolor);
+  font-size: 1.8rem;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--white);
+}
+.authbox p {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 1rem;
 }
 @media only screen and (max-width: 600px) {
-    .authbox form{
-      width:25rem;
-    }
-    .user-input input{
-        height:2.7rem;
-    }
+  .authbox form {
+    width: 25rem;
+  }
+  .user-input input {
+    height: 2.7rem;
+  }
 }

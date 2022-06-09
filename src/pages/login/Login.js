@@ -33,6 +33,28 @@ function Login() {
       setLogindata({ email: "", password: "" })
     }
   }
+  const testLoginHadler = async (e) => {
+
+    e.preventDefault()
+    try {
+      setLogindata({ email: "someone@gmail.com", password: "Someone@123" })
+      const response = await axios.post(`/api/auth/login`,
+        JSON.stringify({ email: "someone@gmail.com", password: "Someone@123" })
+      )
+
+      if (response.data.errors) {
+        toast.error(response.data.errors[0])
+      } else {
+        console.log(response.data.foundUser)
+        setAuthuserdata(response.data.foundUser)
+        localStorage.setItem("authtoken", response.data.encodedToken);
+        navigate('/product')
+      }
+      setLogindata({ email: "", password: "" })
+    } catch (err) {
+      console.log(err)
+    }
+  }
   return (
     <>
       <ToastContainer />
@@ -52,6 +74,9 @@ function Login() {
           <div className="term-input">
             <input type="checkbox" />
             <label>I accept all the Terms & Conditions</label>
+          </div>
+          <div className="input_btn">
+            <button onClick={testLoginHadler}>Test Login</button>
           </div>
           <div className="input_btn">
             <button onClick={loginHandler}>Log in</button>
